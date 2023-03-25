@@ -4,7 +4,8 @@
   padding: 10px;
         float:right;
         font-weight:700 ;
-        
+        mix-blend-mode:hard-light;
+
     }
    li{ &:hover {
        color: #0afdfd; 
@@ -17,9 +18,9 @@
     overflow: hidden;
     font-family: 'Montserrat', sans-serif;
 }
-.row{
-  width:70%;
-        margin-top: 200px;
+.r1{
+margin-top: 200px;
+mix-blend-mode:hard-light;
  
 h4{
     color:#0afdfd;
@@ -33,14 +34,13 @@ h2{
 P{
     font-size: 20PX;
 }
-    &:hover{
   
-
-      
-  
-    }
-   
 }
+.sent{
+    margin-top: 70px;
+}
+
+
 @import url('https://fonts.googleapis.com/css?family=Montserrat:700');  
 
 .text{
@@ -48,6 +48,7 @@ P{
 border-radius:5px;
     padding:10px;
     display:inline;
+    text-align: center;
     &:hover{
       
         cursor: pointer;
@@ -76,5 +77,35 @@ cursor: pointer;
     }
 }
 
+@media (max-width:425px) {
 
+    .row{
+        width:70%;
+              margin-top: 100px;
+       
+      h4{
+          color:#0afdfd;
+          font-size:13px;
+      }
+      h1{
+          color:rgb(255, 255, 255);
+          font-size: 15px;
+      }
+      h2{
+          color:rgb(214, 228, 231);
+      }
+      P{
+          font-size: 8PX;
+      }
+}  
+#l{
+    display: none;
+}
+.text{
+    font-size: 10px;
+}
 
+}
+.card{
+
+}
