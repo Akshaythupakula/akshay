@@ -1,111 +1,162 @@
-.container-fluid{
-    ul li{
-  display: block;
-  padding: 10px;
-        float:right;
-        font-weight:700 ;
-        mix-blend-mode:hard-light;
-a{
-    color:#0afdfd;
-    text-decoration:none;
-}
+.container-fluid {
+    ul li {
+        display: block;
+        padding: 10px;
+        float: right;
+        font-weight: 700;
+        mix-blend-mode: hard-light;
+
+        a {
+            color: #091b1bd5;
+            text-decoration: none;
+            &:hover{
+                color: #0afdfd;
+                animation: glow 1s ease-in-out infinite alternate;
+                cursor: pointer;
+
+            }
+        }
     }
-   li{ &:hover {
-       color: #0afdfd; 
-       animation: glow 1s ease-in-out infinite alternate;
-       cursor: pointer;
-    }}
+
+    li {
+        &:hover {
+            color: #0afdfd;
+            animation: glow 1s ease-in-out infinite alternate;
+            cursor: pointer;
+        }
+    }
+
     background-color: #086d6d;
     position: relative;
-    height: 200vh;
     overflow: hidden;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat',
+    sans-serif;
     cursor:url('./../../assets/akshay_thupakula-removebg-preview.png') !important;
 }
-.r1{
-margin-top: 200px;
-mix-blend-mode:hard-light;
- 
-h4{
-    color:#0afdfd;
+
+.r1 {
+    margin-top: 50px;
+    mix-blend-mode: hard-light;
+
+    h4 {
+        color: #0afdfd;
+    }
+
+    h1 {
+        color: rgb(255, 255, 255);
+    }
+
+    h2 {
+        color: rgb(214, 228, 231);
+    }
+
+    P {
+        font-size: 20PX;
+    }
+
 }
-h1{
-    color:rgb(255, 255, 255);
-}
-h2{
-    color:rgb(214, 228, 231);
-}
-P{
-    font-size: 20PX;
-}
-  
-}
-.sent{
+
+.sent {
     margin-top: 70px;
 }
 
+.col-sm-4 {
+    margin-top: 20px;
+    font-size: small;
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat:700');  
-
-.text{
-    border: 2px solid #0afdfd;
-border-radius:5px;
-    padding:10px;
-    display:inline;
-    text-align: center;
-    &:hover{
-      
-        cursor: pointer;
-        transition: 1s;
+    .card {
+        background-color: rgba(156, 154, 161, 0.2);
+        backdrop-filter: blur(14px);
+        border-bottom: 2px solid #0afdfd;
+        border-radius: 9px;
+        color: rgb(248, 247, 246);
         
+        box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);
+.img-fluid{
+    background-color:#012d2d;
+    border-radius: 5px;
+    border-color: #086d6d;
+
+}
+h1{
+    text-shadow: 0 2px 0px #0afdfd,
+    
+}
+
     }
 }
 
-#re{
-    border: 2px solid #0afdfd;
-    border-radius:5px;
-        padding:5px;
-        
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:700');
+
+.text {
+    border-bottom: 2px solid #0afdfd;
+    border-radius: 5px;
+    padding: 10px;
+    display: inline;
+    text-align: center;
+
+    &:hover {
+
+        cursor: pointer;
+        transition: 1s;
+
+    }
 }
 
-#nam{
-    float:left;
+#re {
+    border-bottom: 2px solid #0afdfd;
+    border-radius: 5px;
+    padding: 5px;
+
+}
+
+#nam {
+    float: left;
     font-family: argent;
     font-size: 25px;
     font-weight: 600;
 
     text-transform: uppercase;
-    &:hover{
 
-cursor: pointer;
+    &:hover {
+
+        cursor: pointer;
     }
 }
 
 @media (max-width:425px) {
 
-    .row{
-        width:100%;
- margin-top: 0px;
-      h4{
-          color:#0afdfd;
-          font-size:13px;
-      }
-      h1{
-          color:rgb(255, 255, 255);
-          font-size: 15px;
-      }
-      h2{
-          color:rgb(214, 228, 231);
-      }
-      P{
-          font-size: 8PX;
-      }
-}  
-#l{
-    display: none;
-}
-.text{
-    font-size: 10px;
-}
+    .row {
+        width: 100%;
+        margin-top: 0px;
+
+        h4 {
+            color: #0afdfd;
+            font-size: 13px;
+        }
+
+        h1 {
+            color: rgb(255, 255, 255);
+            font-size: 15px;
+        }
+
+        h2 {
+            color: rgb(214, 228, 231);
+        }
+
+        P {
+            font-size: 8PX;
+        }
+    }
+
+    #l {
+        display: none;
+    }
+
+    .text {
+        font-size: 10px;
+        border-bottom: #0afdfd;
+    }
 
 }
