@@ -1,3 +1,62 @@
+$animation-duration: 2s;
+$animation-delay: 0.1s;
+
+@keyframes dropWords {
+    0% {
+        transform: translateY(-50%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0vh);
+        opacity: 1;
+    }
+}
+
+.sent ,.image {
+    display: inline-block;
+    position: relative;
+    animation: dropWords $animation-duration ease-in-out 1;
+
+    h2,
+    p {
+        display: inline-block;
+        position: relative;
+        animation: inherit;
+        animation-delay: $animation-delay;
+    }
+
+}
+
+
+
+
+
+
+
+$animation-duration: 1s; // Change this to your desired animation duration
+
+// Apply animation to the image container
+.image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px; // Adjust border radius as needed
+
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+        transition: transform $animation-duration ease-in-out; // Define transition for smooth animation
+    }
+
+    &:hover img {
+        transform: scale(1.5); // Apply scale transformation on hover
+    }
+}
+
+
+
+
 .container-fluid {
     ul li {
         display: block;
@@ -9,7 +68,8 @@
         a {
             color: #091b1bd5;
             text-decoration: none;
-            &:hover{
+
+            &:hover {
                 color: #0afdfd;
                 animation: glow 1s ease-in-out infinite alternate;
                 cursor: pointer;
@@ -34,6 +94,45 @@
     cursor:url('./../../assets/akshay_thupakula-removebg-preview.png') !important;
 }
 
+
+
+
+.r1 {
+    &:hover h1 {
+        animation: shake 1.5s 1;
+    }
+
+
+    @keyframes shake {
+        0% {
+            transform: translateX(0px);
+        }
+
+        25% {
+            transform: translateX(-5px);
+        }
+
+        50% {
+            transform: translateX(5px);
+        }
+
+        75% {
+            transform: translateX(-5px);
+        }
+
+        100% {
+            transform: translateX(0);
+        }
+    }
+}
+#experince,#about{
+    color: #0afdfd;
+
+}
+.exp{
+    color: rgb(214, 228, 231);
+
+}
 .r1 {
     margin-top: 50px;
     mix-blend-mode: hard-light;
@@ -60,49 +159,12 @@
     margin-top: 70px;
 }
 
-.col-sm-4 {
-    margin-top: 20px;
-    font-size: small;
 
-    .card {
-        background-color: rgba(156, 154, 161, 0.2);
-        backdrop-filter: blur(14px);
-        border-bottom: 2px solid #0afdfd;
-        border-radius: 9px;
-        color: rgb(248, 247, 246);
-        
-        box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);
-.img-fluid{
-    background-color:#012d2d;
-    border-radius: 5px;
-    border-color: #086d6d;
-
-}
-h1{
-    text-shadow: 0 2px 0px #0afdfd,
-    
-}
-
-    }
-}
 
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:700');
 
-.text {
-    border-bottom: 2px solid #0afdfd;
-    border-radius: 5px;
-    padding: 10px;
-    display: inline;
-    text-align: center;
-
-    &:hover {
-
-        cursor: pointer;
-        transition: 1s;
-
-    }
-}
+// 
 
 #re {
     border-bottom: 2px solid #0afdfd;
@@ -159,4 +221,56 @@ h1{
         border-bottom: #0afdfd;
     }
 
+}
+
+
+
+// Define variables
+$animation-duration: 0.5s; // Change this to your desired animation duration
+$animation-delay: 0.1s; // Change this to your desired delay
+
+
+
+// Apply the animation to the card
+.card {
+    margin-top: 20px;
+    width: 300px;
+    background-color: #dbcbd8;
+background-image: linear-gradient(316deg, #7a2e2e 0%, #036e6e 74%);
+    flex-direction: row;
+    color: rgb(255, 255, 255);
+    text-align: justify;
+    h1{
+        margin-left: 20px;
+    }
+    
+
+   
+
+
+}
+
+.reactn {
+    text-align: start;
+
+    .paragraph {
+        margin-top: 20px;
+    }
+
+    .card {
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    }
+}
+
+.S2 {
+    .card {
+        width: 350px;
+        text-align: center;
+    }
+}
+
+.S3 {
+    .card {
+        width: 400px
+    }
 }

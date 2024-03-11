@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class DashboardComponent {
 
+  para=false
+
+paragraph(){
+  this.para=true
+
+}
+
 }
