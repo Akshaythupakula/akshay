@@ -1,108 +1,185 @@
-<div class="container-fluid head">
+<div class="container-fluid  " [ngClass]="{ 'head': mobile1 }">
 
-    <br>
-    <p id="nam">akshay</p>
 
-    <ul>
-        <!-- <li id="re"> <a href="./../../assets/akshay_thupakula-removebg-preview.png">resume</a></li> -->
-        <li id="l"> <a href="#about">Skills</a> </li>
-        <li id="l"><a href="#experince">experinces</a></li>
-        <li id="l">work</li>
-        <li id="l">contact</li>
 
-    </ul>
+    <nav class="navbar navbar-expand-lg  ">
+        <div class="container-fluid">
+            <a class="navbar-brand" id="nam">akshay</a>
 
-    <div class="container ">
-        <div class="row r1">
-            <div class="col-sm-6 sent">
-                <h4>Hai, my name is </h4>
-                <h1>Thupakula akshay kumar</h1>
-                <H2>I build things for the web and mobile. </H2>
-                <p>I am a software engineer specializing in building and desigining mobile and web applications .
-                    Currently I am focused on building web applications for Visiram Solutions.
+            <div class="navbar-toggler" data-toggle="collapse" (click)="toggleNavbar()"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+
+                <span *ngIf=isNavbarCollapsed class="fas fa-chevron-left">
+
+                </span>
+                <span *ngIf=!isNavbarCollapsed class="fas fa-bars">
+
+                </span>
+
+            </div>
+
+
+            <div class="collapse navbar-collapse" [ngClass]="{ 'show': isNavbarCollapsed }">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#about">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#experince">experinces</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#work">work</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#contact">Contact </a>
+                    </li>
+                </ul>
+
+
+
+            </div>
+        </div>
+    </nav>
+    <div (click)="nav()">
+        <div class="container ">
+            <div class="row r1">
+                <div class="col-sm-6 sent">
+                    <h4>Hai, my name is </h4>
+                    <h1>Thupakula akshay kumar</h1>
+                    <H2>I build things for the web and mobile. </H2>
+                    <p>I am a software engineer specializing in building and desigining mobile and web applications
+                        .
+                        Currently I am focused on building web applications for Visiram Solutions.
+                    </p>
+                </div>
+                <div class="col-sm-6 image">
+                    <img src="./../../assets/akshay_thupakula-removebg-preview.png" alt="" class="img-fluid">
+                    <br>
+
+                </div>
+            </div>
+            <br>
+            <br>
+
+
+            <!-- mobile view in complete -->
+            <!-- <h1 (click)="mobile()">mobile</h1> -->
+
+
+        </div>
+
+
+
+        <div class="container-fluid">
+
+            <div id="experince">
+                <h1>experince</h1>
+            </div>
+            <hr>
+            <div class="row exp">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius corrupti, laboriosam labore
+                    voluptate
+                    tempora
+                    totam sapiente velit pariatur quam molestiae quo tenetur deleniti libero neque amet, vero
+                    accusantium
+                    unde
+                    ducimus.
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur dolorem mollitia repellat
+                    nemo
+                    tenetur
+                    quis assumenda ut cum! Voluptatem numquam ex nostrum unde accusamus sapiente ab inventore facere
+                    libero
+                    explicabo.
+
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas at dolore, ratione dolorem
+                    maxime
+                    voluptatibus commodi, incidunt, amet earum aliquam cum doloribus unde veniam quisquam accusamus
+                    perferendis
+                    necessitatibus reiciendis impedit.
                 </p>
             </div>
-            <div class="col-sm-6 image">
-                <img src="./../../assets/akshay_thupakula-removebg-preview.png" alt="" class="img-fluid">
-                <br>
+            <div id="about">
+                <h1>Skills</h1>
+            </div>
 
+            <hr>
+            <div class=" skills">
+                <div class="row S1">
+                    <div class="col-sm-3  reactn">
+                        <div class="card c" (click)="paragraph('1')">
+                            <h1>Angular</h1>
+                        </div>
+                        <div class="card c" (click)="paragraph('2')">
+                            <h1>react </h1>
+                        </div>
+                        <div class="card c" (click)="paragraph('3')">
+                            <h1>react native </h1>
+                        </div>
+
+                    </div>
+                    <div class="col-sm-9 reactn">
+                        <div class="paragraph " *ngIf="para == '1'" [ngClass]="{ 'display': none }">
+                            <h1>angular</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam ipsa praesentium
+                                perferendis,
+                                reprehenderit quam placeat, dolorem dolore iusto saepe id culpa? Et saepe, eveniet
+                                exercitationem architecto maiores iure laudantium debitis.</p>
+                        </div>
+                        <div class="paragraph" *ngIf="para == '2'" [ngClass]="{ 'display': none }">
+                            <h1>
+                                react
+                            </h1>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita nesciunt magni ex
+                                numquam
+                                ipsa quasi saepe modi quam omnis dolore porro, dolorum eius totam repellendus illum
+                                alias
+                                labore recusandae voluptatem!</p>
+                        </div>
+                        <div class="paragraph" *ngIf="para == '3'" [ngClass]="{ 'display': none }">
+                            <h1>react native</h1>
+                            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti quaerat explicabo
+                                quos
+                                atque
+                                doloremque, rerum culpa reiciendis odio numquam iste quasi omnis incidunt. Quisquam
+                                error
+                                doloremque
+                                ea, dolorum minima at.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="work">
+
+
+                <h1>Work</h1>
+
+
+            </div>
+            <hr>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <a href="https://shraylon.netlify.app/">
+
+                            <div class="mobile">
+                                <div class="top-bar"></div>
+                                <div class="screen">
+                                    <!-- Your content here -->
+                                    <div class=" iframe-container">
+                                        <iframe src="https://shraylon.netlify.app/" frameborder="0"></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+
+                    </div>
+
+                </div>
             </div>
         </div>
-        <br>
-        <br>
-        <div  id="about">
-            <h1>Skills</h1> </div>
-        <div class=" skills">
-            <div class="row S1">
-                <div class="col-sm-3  reactn">
-                    <div class="card" (click)="paragraph()">
-                        <h1>Angular</h1>
-                    </div>
-
-                </div>
-                <div class="col-sm-6 reactn">
-                    <div class="paragraph" *ngIf="para">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti quaerat explicabo quos atque
-                        doloremque, rerum culpa reiciendis odio numquam iste quasi omnis incidunt. Quisquam error
-                        doloremque
-                        ea, dolorum minima at.
-                    </div>
-                </div>
-            </div>
-            <div class="row S2">
-                <div class="col-sm-4  reactn">
-                    <div class="card" (click)="paragraph()">
-                        <h1>React js</h1>
-                    </div>
-
-                </div>
-                <div class="col-sm-6 reactn">
-                    <div class="paragraph" *ngIf="para">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti quaerat explicabo quos atque
-                        doloremque, rerum culpa reiciendis odio numquam iste quasi omnis incidunt. Quisquam error
-                        doloremque
-                        ea, dolorum minima at.
-                    </div>
-                </div>
-            </div>
-            <div class="row S3">
-                <div class="col-sm-6  reactn">
-                    <div class="card" (click)="paragraph()">
-                        <h1>react native</h1>
-                    </div>
-
-                </div>
-                <div class="col-sm-6 reactn">
-                    <div class="paragraph" *ngIf="para">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti quaerat explicabo quos atque
-                        doloremque, rerum culpa reiciendis odio numquam iste quasi omnis incidunt. Quisquam error
-                        doloremque
-                        ea, dolorum minima at.
-                    </div>
-                </div>
-            </div>
 
 
-        </div>
-        <hr>
 
-        <div id="experince">
-            <h1>experince</h1>
-        </div>
-     <div class="row exp">
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius corrupti, laboriosam labore voluptate tempora
-            totam sapiente velit pariatur quam molestiae quo tenetur deleniti libero neque amet, vero accusantium unde
-            ducimus.
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur dolorem mollitia repellat nemo tenetur
-            quis assumenda ut cum! Voluptatem numquam ex nostrum unde accusamus sapiente ab inventore facere libero
-            explicabo.
-        
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas at dolore, ratione dolorem maxime
-            voluptatibus commodi, incidunt, amet earum aliquam cum doloribus unde veniam quisquam accusamus perferendis
-            necessitatibus reiciendis impedit.
-        </p>
-     </div>
     </div>
-
-
 </div>
