@@ -1,6 +1,51 @@
 $animation-duration: 2s;
 $animation-delay: 0.1s;
 
+
+
+/* CSS */
+.button-8 {
+  background-color: #e1ecf4;
+  border-radius: 3px;
+  border: 1px solid #7aa7c7;
+  box-shadow: rgba(255, 255, 255, .7) 0 1px 0 0 inset;
+  box-sizing: border-box;
+  color: #39739d;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI","Liberation Sans",sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.15385;
+  margin: 0;
+  outline: none;
+  padding: 8px .8em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  white-space: nowrap;
+  margin: 3px;
+}
+
+.button-8:hover,
+.button-8:focus {
+  background-color: #b3d3ea;
+  color: #2c5777;
+}
+
+.button-8:focus {
+  box-shadow: 0 0 0 4px rgba(0, 149, 255, .15);
+}
+
+.button-8:active {
+  background-color: #a0c7e4;
+  box-shadow: none;
+  color: #2c5777;
+}
 @keyframes dropWords {
     0% {
         transform: translateX(-50%);
@@ -15,7 +60,7 @@ $animation-delay: 0.1s;
 
 .sent,
 .image {
-    
+
     display: inline-block;
     position: relative;
     animation: dropWords $animation-duration ease-in-out 1;
@@ -40,10 +85,11 @@ $animation-delay: 0.1s;
 .image {
     position: relative;
     overflow: hidden;
-    border-radius: 8px; 
+    border-radius: 8px;
+
     img {
         display: block;
-        width:auto;
+        width: auto;
         height: auto;
         transition: transform $animation-duration ease-in-out; // Define transition for smooth animation
     }
@@ -57,14 +103,14 @@ $animation-delay: 0.1s;
 
 
 .container-fluid {
-    
+
     ul li {
         display: block;
         padding: 10px;
         float: right;
         font-weight: 700;
         mix-blend-mode: hard-light;
-        
+
 
         a {
             color: #091b1bd5;
@@ -127,7 +173,8 @@ $animation-delay: 0.1s;
 }
 
 #experince,
-#about,#work {
+#about,
+#work {
     margin-top: 20px;
     color: #0afdfd;
 
@@ -139,7 +186,7 @@ $animation-delay: 0.1s;
 }
 
 .r1 {
-    
+
     mix-blend-mode: hard-light;
 
     h4 {
@@ -156,10 +203,13 @@ $animation-delay: 0.1s;
 
     P {
         font-size: 20PX;
-        
+
     }
-    #res{
+
+    #res {
         cursor: grab;
+        color: #011a1a;
+ 
     }
 
 }
@@ -169,10 +219,10 @@ $animation-delay: 0.1s;
 }
 
 .sent2 {
-   align-items: center;
+    align-items: center;
 
-   margin-top:200px;
-   margin-left:100px;
+    margin-top: 200px;
+    margin-left: 100px;
 }
 
 
@@ -202,7 +252,11 @@ $animation-delay: 0.1s;
     }
 }
 
+
 @media screen and (max-width:425px) {
+    #res {
+        display: none;
+    }
 
     .row {
         width: 100%;
@@ -225,34 +279,37 @@ $animation-delay: 0.1s;
         P {
             font-size: 8PX;
         }
+
     }
 
-   
+
 
     .text {
         font-size: 10px;
         border-bottom: #0afdfd;
     }
-.col-sm-4{
-    margin:0px;
-    width:320px;
-    stroke-width: none;
-    .mobile{
-        width:280px;
-        margin-left: 3px;
-        height: 460px;
+
+    .col-sm-4 {
+        margin: 0px;
+        width: 320px;
+        stroke-width: none;
+
+        .mobile {
+            width: 280px;
+            margin-left: 3px;
+            height: 460px;
+        }
+
+        iframe {
+            width: 260px;
+            overflow: hidden;
+            scroll-snap-stop: always;
+
+        }
+
     }
 
-    iframe{
-        width:260px;
-        overflow: hidden;
-        scroll-snap-stop:always;
 
-    }
-
-}
-
-  
 }
 
 
@@ -266,10 +323,10 @@ $animation-delay: 0.1s; // Change this to your desired delay
 // Apply the animation to the card
 .c {
     margin-top: 20px;
-    
+
     background-color: #dbcbd8;
     background-image: linear-gradient(316deg, #7a2e2e 0%, #036e6e 74%);
-    
+
     color: rgb(255, 255, 255);
 
 
@@ -285,8 +342,8 @@ $animation-delay: 0.1s; // Change this to your desired delay
 
 .reactn {
     text-align: start;
-flex-direction: row;
- 
+    flex-direction: row;
+
 
 
 }
@@ -294,44 +351,49 @@ flex-direction: row;
 
 
 .display {
-    h1{
+    h1 {
         color: #0afdfd;
     }
+
     color:aliceblue;
     animation: dropWords $animation-duration ease-in-out 1;
 }
-.iframe{
-    display:none;
+
+.iframe {
+    display: none;
 }
-.head{
-    display:none;
-  
+
+.head {
+    display: none;
+
 }
-.mobileview{
-    display:contents
+
+.mobileview {
+    display: contents
 }
 
 
-.iframe-container{
-    overflow: hidden; /* Ensures iframe stays within boundaries */
+.iframe-container {
+    overflow: hidden;
+    /* Ensures iframe stays within boundaries */
     scrollbar-width: none;
 
 }
 
-  
-  iframe {
+
+iframe {
     width: 375px;
-  height: 600px;
+    height: 600px;
     border-radius: 1%;
     overflow-y: hidden;
     position: relative;
-  }
+}
 
-  .mobile {
- 
+.mobile {
 
-        // transform: rotateY(30deg);
-      
+
+    // transform: rotateY(30deg);
+
     width: 375px;
     height: 600px;
     background-color: #434646;
@@ -344,18 +406,18 @@ flex-direction: row;
     flex-direction: column;
     margin-top: 50px;
     margin-left: 80px;
-  }
+}
 
-  .screen {
+.screen {
     flex: 1;
     background-color: #fff;
     border-radius: 20px;
     overflow: hidden;
     position: relative;
 
-  }
+}
 
-  .top-bar{
+.top-bar {
     height: 10px;
     background-color: #808587;
     position: absolute;
@@ -364,55 +426,60 @@ flex-direction: row;
     right: 0;
     text-align: center;
     color: black;
-  }
-  .dot {
+}
+
+.dot {
     height: 15px;
     width: 15px;
     background-color: #060000;
     border-radius: 100%;
     display: inline-block;
-    box-shadow: inset 0 0 0 200px rgba(255,255,255,0.08);
-  }
-
-  .top-bar {
-    top: 0;
-  }
-
-  .tile-progress {
-background-color: #303641;
-color: #fff;
+    box-shadow: inset 0 0 0 200px rgba(255, 255, 255, 0.08);
 }
+
+.top-bar {
+    top: 0;
+}
+
+.tile-progress {
+    background-color: #303641;
+    color: #fff;
+}
+
 .tile-progress {
 
-color: #fff;
-margin-bottom: 20px;
+    color: #fff;
+    margin-bottom: 20px;
 
-border-radius: 3px;
+    border-radius: 3px;
 }
+
 .tile-progress .tile-header {
-padding: 15px 20px;
-padding-bottom: 40px;
+    padding: 15px 20px;
+    padding-bottom: 40px;
 }
+
 .tile-progress .tile-progressbar {
-height: 2px;
-background-color:#045053;
-margin: 0;
+    height: 2px;
+    background-color: #045053;
+    margin: 0;
 
 
 }
 
 .tile-progress .tile-progressbar span {
-display: block;
-background:#0afdfd;
-width: 0;
-height: 100%;
+    display: block;
+    background: #0afdfd;
+    width: 0;
+    height: 100%;
 
 }
+
 .tile-progress .tile-footer {
-padding: 20px;
-text-align: right;
-background: rgba(0,0,0,0.1);
- 
+    padding: 20px;
+    text-align: right;
+    background: rgba(0, 0, 0, 0.1);
+
 }
 
 
@@ -420,139 +487,138 @@ background: rgba(0,0,0,0.1);
 .skills {
 
     opacity: 0;
-    
-   
-  }
-  .visible {
+
+
+}
+
+.visible {
     opacity: 1;
     animation: dropWords $animation-duration ease-in-out 1;
     animation-delay: $animation-delay;
-  }
+}
 
-  
-  @keyframes animate {
 
-    0%{
+@keyframes animate {
+
+    0% {
         transform: translateY(0) rotate(0deg);
         opacity: 1;
         border-radius: 0;
     }
 
-    100%{
+    100% {
         transform: translateY(-1000px) rotate(720deg);
         opacity: 0;
         border-radius: 50%;
     }
 
 }
-      
-      
-      
-      
-      .work{
-          background: #022a45;  
-          background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);  
-          width: 100%;
-          height:fit-content;
-          
-         
-      }
-      
-      .circles{
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          overflow: hidden;
-      }
-      
-      .circles li{
-          position: absolute;
-          display: block;
-          list-style: none;
-          width: 20px;
-          height: 20px;
-          background: rgba(255, 255, 255, 0.2);
-          animation: animate 25s linear infinite;
-          bottom: -150px;
-          
-      }
-      
-      .circles li:nth-child(1){
-          left: 25%;
-          width: 80px;
-          height: 80px;
-          animation-delay: 0s;
-      }
-      
-      
-      .circles li:nth-child(2){
-          left: 10%;
-          width: 20px;
-          height: 20px;
-          animation-delay: 2s;
-          animation-duration: 12s;
-      }
-      
-      .circles li:nth-child(3){
-          left: 70%;
-          width: 20px;
-          height: 20px;
-          animation-delay: 4s;
-      }
-      
-      .circles li:nth-child(4){
-          left: 40%;
-          width: 60px;
-          height: 60px;
-          animation-delay: 0s;
-          animation-duration: 18s;
-      }
-      
-      .circles li:nth-child(5){
-          left: 65%;
-          width: 20px;
-          height: 20px;
-          animation-delay: 0s;
-      }
-      
-      .circles li:nth-child(6){
-          left: 75%;
-          width: 110px;
-          height: 110px;
-          animation-delay: 3s;
-      }
-      
-      .circles li:nth-child(7){
-          left: 35%;
-          width: 150px;
-          height: 150px;
-          animation-delay: 7s;
-      }
-      
-      .circles li:nth-child(8){
-          left: 50%;
-          width: 25px;
-          height: 25px;
-          animation-delay: 15s;
-          animation-duration: 45s;
-      }
-      
-      .circles li:nth-child(9){
-          left: 20%;
-          width: 15px;
-          height: 15px;
-          animation-delay: 2s;
-          animation-duration: 35s;
-      }
-      
-      .circles li:nth-child(10){
-          left: 85%;
-          width: 150px;
-          height: 150px;
-          animation-delay: 0s;
-          animation-duration: 11s;
-      }
-      
-  
+
+
+
+
+.work {
+    background: #022a45;
+    background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
+    width: 100%;
+    height: fit-content;
+
+
+}
+
+.circles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.circles li {
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+
+}
+
+.circles li:nth-child(1) {
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+
+.circles li:nth-child(2) {
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.circles li:nth-child(3) {
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+.circles li:nth-child(4) {
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.circles li:nth-child(5) {
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(6) {
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+
+.circles li:nth-child(7) {
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+
+.circles li:nth-child(8) {
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.circles li:nth-child(9) {
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.circles li:nth-child(10) {
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
