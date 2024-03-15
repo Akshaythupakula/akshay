@@ -15,6 +15,7 @@ $animation-delay: 0.1s;
 
 .sent,
 .image {
+    
     display: inline-block;
     position: relative;
     animation: dropWords $animation-duration ease-in-out 1;
@@ -42,7 +43,7 @@ $animation-delay: 0.1s;
     border-radius: 8px; 
     img {
         display: block;
-        width: 100%;
+        width:auto;
         height: auto;
         transition: transform $animation-duration ease-in-out; // Define transition for smooth animation
     }
@@ -86,12 +87,11 @@ $animation-delay: 0.1s;
         }
     }
 
-    background-color: #086d6d;
+    background-color: #096363;
     position: relative;
     overflow: hidden;
     font-family: 'Montserrat',
     sans-serif;
-    cursor:url('./../../assets/akshay_thupakula-removebg-preview.png') !important;
 }
 
 
@@ -156,6 +156,10 @@ $animation-delay: 0.1s;
 
     P {
         font-size: 20PX;
+        
+    }
+    #res{
+        cursor: grab;
     }
 
 }
@@ -164,6 +168,12 @@ $animation-delay: 0.1s;
     margin-top: 70px;
 }
 
+.sent2 {
+   align-items: center;
+
+   margin-top:200px;
+   margin-left:100px;
+}
 
 
 
@@ -224,14 +234,20 @@ $animation-delay: 0.1s;
         border-bottom: #0afdfd;
     }
 .col-sm-4{
-    overflow-x: auto;
+    margin:0px;
     width:320px;
     stroke-width: none;
     .mobile{
-        width:320px
+        width:280px;
+        margin-left: 3px;
+        height: 460px;
     }
+
     iframe{
-        width:320px
+        width:260px;
+        overflow: hidden;
+        scroll-snap-stop:always;
+
     }
 
 }
@@ -269,13 +285,8 @@ $animation-delay: 0.1s; // Change this to your desired delay
 
 .reactn {
     text-align: start;
-
-    .paragraph {
-        
-        h1{
-            text-align: center;
-        }
-    }
+flex-direction: row;
+ 
 
 
 }
@@ -289,21 +300,17 @@ $animation-delay: 0.1s; // Change this to your desired delay
     color:aliceblue;
     animation: dropWords $animation-duration ease-in-out 1;
 }
-
-.head{
-    
-    width: 360px; /* Width of a typical mobile device */
-    height: 640px; /* Height of a typical mobile device */
-    border: 1px solid #ccc; /* Border to visualize the mobile screen */
-    overflow: auto; 
-    scrollbar-width: none;
-    transform: rotate(-45deg);transform: rotate(45deg);
-
-    font-size: 2px;
-    h1 ,h4 ,h2 ,p{
-    font-size: 2px;
-    }
+.iframe{
+    display:none;
 }
+.head{
+    display:none;
+  
+}
+.mobileview{
+    display:contents
+}
+
 
 .iframe-container{
     overflow: hidden; /* Ensures iframe stays within boundaries */
@@ -319,11 +326,15 @@ $animation-delay: 0.1s; // Change this to your desired delay
     overflow-y: hidden;
     position: relative;
   }
- 
+
   .mobile {
+ 
+
+        // transform: rotateY(30deg);
+      
     width: 375px;
     height: 600px;
-    background-color: #064b76;
+    background-color: #434646;
     border-radius: 20px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -331,7 +342,6 @@ $animation-delay: 0.1s; // Change this to your desired delay
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    transform: rotate(-160deg);
     margin-top: 50px;
     margin-left: 80px;
   }
@@ -342,22 +352,207 @@ $animation-delay: 0.1s; // Change this to your desired delay
     border-radius: 20px;
     overflow: hidden;
     position: relative;
-    transform: rotate(-180deg);
 
   }
 
   .top-bar{
     height: 10px;
-    background-color: #044865;
+    background-color: #808587;
     position: absolute;
     width: 100%;
     left: 0;
     right: 0;
+    text-align: center;
+    color: black;
+  }
+  .dot {
+    height: 15px;
+    width: 15px;
+    background-color: #060000;
+    border-radius: 100%;
+    display: inline-block;
+    box-shadow: inset 0 0 0 200px rgba(255,255,255,0.08);
   }
 
   .top-bar {
     top: 0;
   }
 
+  .tile-progress {
+background-color: #303641;
+color: #fff;
+}
+.tile-progress {
 
+color: #fff;
+margin-bottom: 20px;
+
+border-radius: 3px;
+}
+.tile-progress .tile-header {
+padding: 15px 20px;
+padding-bottom: 40px;
+}
+.tile-progress .tile-progressbar {
+height: 2px;
+background-color:#045053;
+margin: 0;
+
+
+}
+
+.tile-progress .tile-progressbar span {
+display: block;
+background:#0afdfd;
+width: 0;
+height: 100%;
+
+}
+.tile-progress .tile-footer {
+padding: 20px;
+text-align: right;
+background: rgba(0,0,0,0.1);
  
+}
+
+
+
+.skills {
+
+    opacity: 0;
+    
+   
+  }
+  .visible {
+    opacity: 1;
+    animation: dropWords $animation-duration ease-in-out 1;
+    animation-delay: $animation-delay;
+  }
+
+  
+  @keyframes animate {
+
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+
+}
+      
+      
+      
+      
+      .work{
+          background: #022a45;  
+          background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);  
+          width: 100%;
+          height:fit-content;
+          
+         
+      }
+      
+      .circles{
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+      }
+      
+      .circles li{
+          position: absolute;
+          display: block;
+          list-style: none;
+          width: 20px;
+          height: 20px;
+          background: rgba(255, 255, 255, 0.2);
+          animation: animate 25s linear infinite;
+          bottom: -150px;
+          
+      }
+      
+      .circles li:nth-child(1){
+          left: 25%;
+          width: 80px;
+          height: 80px;
+          animation-delay: 0s;
+      }
+      
+      
+      .circles li:nth-child(2){
+          left: 10%;
+          width: 20px;
+          height: 20px;
+          animation-delay: 2s;
+          animation-duration: 12s;
+      }
+      
+      .circles li:nth-child(3){
+          left: 70%;
+          width: 20px;
+          height: 20px;
+          animation-delay: 4s;
+      }
+      
+      .circles li:nth-child(4){
+          left: 40%;
+          width: 60px;
+          height: 60px;
+          animation-delay: 0s;
+          animation-duration: 18s;
+      }
+      
+      .circles li:nth-child(5){
+          left: 65%;
+          width: 20px;
+          height: 20px;
+          animation-delay: 0s;
+      }
+      
+      .circles li:nth-child(6){
+          left: 75%;
+          width: 110px;
+          height: 110px;
+          animation-delay: 3s;
+      }
+      
+      .circles li:nth-child(7){
+          left: 35%;
+          width: 150px;
+          height: 150px;
+          animation-delay: 7s;
+      }
+      
+      .circles li:nth-child(8){
+          left: 50%;
+          width: 25px;
+          height: 25px;
+          animation-delay: 15s;
+          animation-duration: 45s;
+      }
+      
+      .circles li:nth-child(9){
+          left: 20%;
+          width: 15px;
+          height: 15px;
+          animation-delay: 2s;
+          animation-duration: 35s;
+      }
+      
+      .circles li:nth-child(10){
+          left: 85%;
+          width: 150px;
+          height: 150px;
+          animation-delay: 0s;
+          animation-duration: 11s;
+      }
+      
+  

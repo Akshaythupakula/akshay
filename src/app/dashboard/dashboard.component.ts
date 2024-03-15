@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-dashboard',
@@ -8,6 +8,8 @@ import { Component } from '@angular/core';
 export class DashboardComponent {
 
   para='0'
+  para1='0'
+  para2='0'
 none=''
 mobile1=false
 expand1=false
@@ -21,30 +23,46 @@ toggleNavbar() {
 nav(){
   this.isNavbarCollapsed = false;
 }
-paragraph(eventType: string){
-  if(eventType=='1')
-  {
-    this.para='1'
-    this.none='none'
-  }else if(eventType=='2'){
-    this.para='2'
-    
+paragraph(){
+this.para='1'
+this.none='true'
   }
-  else{
-    this.para='3'
-  }
-  
 
+paragraph1(){
+  this.para1='1'
+} 
+paragraph2(){
+  this.para2='1'
 }
+
+
+
 mobile(){
   this.mobile1=true
 }
 expanded(){
 this.expand1=true
 }
-
-
-
+back(){
+  this.mobile1=false
 }
 
 
+isVisible: boolean = false;
+
+@HostListener('window:scroll', ['$event'])
+onWindowScroll() {
+  const skills = document.querySelector('.skills');
+  if (!skills) return; 
+  const triggerBottom = window.innerHeight * 0.8; // Adjust as needed
+
+  const skillsTop = skills.getBoundingClientRect().top;
+
+  if (skillsTop < triggerBottom) {
+    this.isVisible = true;
+  } else {
+    this.isVisible = false;
+  }
+}
+
+}

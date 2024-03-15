@@ -1,3 +1,39 @@
+<div class=" container iframe" [ngClass]="{ 'mobileview': mobile1 }">
+
+    <div class="row">
+        <div class="co-sm-2">
+
+        </div>
+        <div class="col-sm-6 sent2">
+            <h4>Hai, my name is </h4>
+            <h1>Thupakula akshay kumar</h1>
+            <H2>This is the mobile view of my website </H2>
+            <p>loooking forward for other responses
+            </p>
+            <button>tab</button>
+            <button>large mobiles</button>
+            <button>small mobiles</button>
+            <br>
+            <hr>
+            <button (click)="back()">back</button>
+        </div>
+        <div class="col-sm-4">
+            <div class="mobile">
+                <div class="top-bar">
+                    <span class="dot"></span>
+                </div>
+                <div class="screen">
+
+                    <div class=" iframe-container">
+                        <iframe src="https://akshayprofile.netlify.app/" frameborder="0"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
 <div class="container-fluid  " [ngClass]="{ 'head': mobile1 }">
 
 
@@ -51,9 +87,10 @@
                         .
                         Currently I am focused on building web applications for Visiram Solutions.
                     </p>
+                    <p (click)="mobile()" id="res">view this page responsiveness</p>
                 </div>
-                <div class="col-sm-6 image">
-                    <img src="./../../assets/akshay_thupakula-removebg-preview.png" alt="" class="img-fluid">
+                <div class="col-sm-5 image">
+                    <img src="./../../assets/WhatsApp Image 2024-03-15 at 10.28.10 AM.jpeg" alt="" class="img-fluid">
                     <br>
 
                 </div>
@@ -63,7 +100,7 @@
 
 
             <!-- mobile view in complete -->
-            <!-- <h1 (click)="mobile()">mobile</h1> -->
+
 
 
         </div>
@@ -103,68 +140,99 @@
             </div>
 
             <hr>
-            <div class=" skills">
-                <div class="row S1">
-                    <div class="col-sm-3  reactn">
-                        <div class="card c" (click)="paragraph('1')">
-                            <h1>Angular</h1>
-                        </div>
-                        <div class="card c" (click)="paragraph('2')">
-                            <h1>react </h1>
-                        </div>
-                        <div class="card c" (click)="paragraph('3')">
-                            <h1>react native </h1>
-                        </div>
+            <div class=" skill">
+                <div class="row skills" [class.visible]="isVisible">
 
-                    </div>
-                    <div class="col-sm-9 reactn">
-                        <div class="paragraph " *ngIf="para == '1'" [ngClass]="{ 'display': none }">
-                            <h1>angular</h1>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam ipsa praesentium
-                                perferendis,
-                                reprehenderit quam placeat, dolorem dolore iusto saepe id culpa? Et saepe, eveniet
-                                exercitationem architecto maiores iure laudantium debitis.</p>
-                        </div>
-                        <div class="paragraph" *ngIf="para == '2'" [ngClass]="{ 'display': none }">
-                            <h1>
-                                react
-                            </h1>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita nesciunt magni ex
-                                numquam
-                                ipsa quasi saepe modi quam omnis dolore porro, dolorum eius totam repellendus illum
-                                alias
-                                labore recusandae voluptatem!</p>
-                        </div>
-                        <div class="paragraph" *ngIf="para == '3'" [ngClass]="{ 'display': none }">
-                            <h1>react native</h1>
-                            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti quaerat explicabo
-                                quos
-                                atque
-                                doloremque, rerum culpa reiciendis odio numquam iste quasi omnis incidunt. Quisquam
-                                error
-                                doloremque
-                                ea, dolorum minima at.</p>
+
+
+                    <div class="col-sm-4 paragraph" [ngClass]="{ 'display': none }">
+                        <div class="tile-progress tile-primary">
+                            <div class="tile-header">
+                                <h3>Angular</h3>
+                                <span>did flaless websites</span>
+                            </div>
+                            <div class="tile-progressbar">
+                                <span data-fill="80.5%" style="width: 80.5%;"></span>
+                            </div>
+                            <div class="tile-footer">
+                                <h4>
+                                    <span class="pct-counter">80.5</span>%
+                                </h4>
+                                <span>my websites are clean and responsive</span>
+                            </div>
                         </div>
                     </div>
+
+
+
+                    <div class="col-sm-4 paragraph" [ngClass]="{ 'display': none }">
+                        <div class="tile-progress tile-primary">
+                            <div class="tile-header">
+                                <h3>React</h3>
+                                <span>proficient in problem solving</span>
+                            </div>
+                            <div class="tile-progressbar">
+                                <span data-fill="65.5%" style="width: 65.5%;"></span>
+                            </div>
+                            <div class="tile-footer">
+                                <h4>
+                                    <span class="pct-counter">65.5</span>%
+                                </h4>
+                                <span>designed 4 websites and a game</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-sm-4 paragraph" [ngClass]="{ 'display': none }">
+                        <div class="tile-progress tile-primary">
+                            <div class="tile-header">
+                                <h3>ReactNative</h3>
+                                <span>designed mobile applications </span>
+                            </div>
+                            <div class="tile-progressbar">
+                                <span data-fill="85.5%" style="width: 85.5%;"></span>
+                            </div>
+                            <div class="tile-footer">
+                                <h4>
+                                    <span class="pct-counter">85.5</span>%
+                                </h4>
+                                <span> developed best mobile applications </span>
+                            </div>
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
             <div id="work">
-
-
                 <h1>Work</h1>
-
-
             </div>
             <hr>
-            <div class="container-fluid">
+            <div class="container-fluid work ">
+              
                 <div class="row">
+                    <ul class="circles">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
                     <div class="col-sm-4">
                         <a href="https://shraylon.netlify.app/">
 
                             <div class="mobile">
-                                <div class="top-bar"></div>
+                                <div class="top-bar">
+                                    <span class="dot"></span>
+                                </div>
                                 <div class="screen">
-                                    <!-- Your content here -->
+
                                     <div class=" iframe-container">
                                         <iframe src="https://shraylon.netlify.app/" frameborder="0"></iframe>
                                     </div>
@@ -174,9 +242,11 @@
 
 
                     </div>
-
+                 
                 </div>
             </div>
+
+
         </div>
 
 
