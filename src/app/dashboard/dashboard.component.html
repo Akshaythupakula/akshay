@@ -11,12 +11,12 @@
             <p>loooking forward for other responses
             </p>
 
-            <button class="button-8">tab</button>
-            <button class="button-8">large mobiles</button>
-            <button class="button-8">small mobiles</button>
+            <p class="button-8">tab</p>x
+            <p class="button-8">large mobiles</p>
+            <p class="button-8">small mobiles</p>
             <br>
             <hr>
-            <button (click)="back()" class="button-8">back</button>
+            <p (click)="back()" class="button-8">back</p>
         </div>
         <div class="col-sm-4">
             <div class="mobile">
@@ -36,14 +36,11 @@
 </div>
 
 <div class="container-fluid  " [ngClass]="{ 'head': mobile1 }">
-
-
-
     <nav class="navbar navbar-expand-lg  ">
         <div class="container-fluid">
             <a class="navbar-brand" id="nam">akshay</a>
 
-            <div class="navbar-toggler" data-toggle="collapse" (click)="toggleNavbar()"
+            <div class="navbar-toggler" data-toggle="collapse" id="nam" (click)="toggleNavbar()"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 
                 <span *ngIf=isNavbarCollapsed class="fas fa-chevron-left">
@@ -56,7 +53,7 @@
             </div>
 
 
-            <div class="collapse navbar-collapse" [ngClass]="{ 'show': isNavbarCollapsed }">
+            <div class="collapse navbar-collapse" id="nam" [ngClass]="{ 'show': isNavbarCollapsed }">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#about">Skills</a>
@@ -84,7 +81,8 @@
                     <h4>Hai, my name is </h4>
                     <h1>Thupakula akshay kumar</h1>
                     <H2>I build things for the web and mobile. </H2>
-                    <p>I am a software engineer specializing in building and desigining mobile and web applications
+                    <p id="tens">I am a software engineer specializing in building and desigining mobile and web
+                        applications
                         .
                         Currently I am focused on building web applications for Visiram Solutions.
                     </p>
@@ -110,23 +108,65 @@
 
         <div class="container-fluid">
 
-            <div id="experince">
-                <h1>experince</h1>
+            <div id="work">
+                <h1>Work</h1>
             </div>
             <hr>
-            <div class="row exp">
-                <p>
-                    I am a highly skilled software developer with extensive experience in building robust and scalable
-                    applications using React Native, Angular, and React.js. Over the years, I have honed my skills in
-                    front-end development and have successfully delivered projects for various clients across different
-                    industries.
-                    <br>
-                    Overall, my experience with React Native, Angular, and React.js has equipped me with the skills and
-                    knowledge needed to deliver high-quality software solutions that meet the needs of clients and end
-                    users. I am passionate about leveraging cutting-edge technologies to create innovative and
-                    user-friendly applications that make a positive impact in the digital world.
-                </p>
+            <!-- <div class="container-fluid work ">
+
+                <div class="row">
+                    <ul class="circles">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                
+                    <div class="col-sm-4">
+                        <a href="https://smashaka.netlify.app/">
+
+                            <div class="mobile">
+                                <div class="top-bar">
+                                    <span class="dot"></span>
+                                </div>
+                                <div class="screen">
+
+                                    <div class=" iframe-container backer">
+                                        <iframe src="https://smashaka.netlify.app/" frameborder="0"></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+
+                    </div>
+                </div>
+            </div> -->
+
+            <div class="container backer">
+
+
+                <div class="wrapper">
+                    <div class="banner-image">
+
+                    </div>
+                    <h1> Smash Pigs</h1>
+                    <p>its a fun game , you smash pigs, <br />
+                        untill you step on bombs</p>
+                </div>
+                <div class="button-wrapper">
+                    <button class="btn outline">DETAILS</button>
+                    &nbsp;
+                    <a href="https://smashaka.netlify.app/"> <button class="btn fill">PLAY GAME</button></a>
+                </div>
             </div>
+
             <div id="about">
                 <h1>Skills</h1>
             </div>
@@ -197,100 +237,43 @@
 
                 </div>
             </div>
-            <div id="work">
-                <h1>Work</h1>
+            <div id="experince">
+                <h1>experince</h1>
             </div>
             <hr>
-            <div class="container-fluid work ">
-
-                <div class="row">
-                    <ul class="circles">
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
-                    <div class="col-sm-4">
-                        <a href="https://shraylon.netlify.app/">
-
-                            <div class="mobile">
-                                <div class="top-bar">
-                                    <span class="dot"></span>
-                                </div>
-                                <div class="screen">
-
-                                    <div class=" iframe-container">
-                                        <iframe src="https://shraylon.netlify.app/" frameborder="0"></iframe>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-
-
-                    </div>
-                    <div class="col-sm-4">
-                        <a href="https://smashaka.netlify.app/">
-
-                            <div class="mobile">
-                                <div class="top-bar">
-                                    <span class="dot"></span>
-                                </div>
-                                <div class="screen">
-
-                                    <div class=" iframe-container">
-                                        <iframe src="https://smashaka.netlify.app/" frameborder="0"></iframe>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-
-
-                    </div>
-                </div>
+            <div class="row exp">
+                <p>
+                    I am a highly skilled software developer with extensive experience in building robust and scalable
+                    applications using React Native, Angular, and React.js. Over the years, I have honed my skills in
+                    front-end development and have successfully delivered projects for various clients across different
+                    industries.
+                    <br>
+                    Overall, my experience with React Native, Angular, and React.js has equipped me with the skills and
+                    knowledge needed to deliver high-quality software solutions that meet the needs of clients and end
+                    users. I am passionate about leveraging cutting-edge technologies to create innovative and
+                    user-friendly applications that make a positive impact in the digital world.
+                </p>
             </div>
 
-            <div class="container-fluid">
+
+
+            <div class="container-fluid backer">
                 <div class="contact">
-                    <!-- <div appCursorLight class="container">
 
-
-
-                        <div class="light" id="light">
-                        </div>
-
-                    </div> -->
                     <h1 id="contact">
                         Contact
                     </h1>
                     <hr>
 
-                    <div class="row contacts">
-                        <div class="col-sm-4"></div>
-                        <div class="col-sm-4">
-                            <div class="tile-progress tile-primary">
-                                <div class="tile-header">
-                                    <h3>akshay kumar thupakula</h3>
-                                    <span>9100751090</span>
-                                </div>
-                                <div class="tile-progressbar">
-                                    <span data-fill="100.5%" style="width: 100%;"></span>
-                                </div>
-                                <div class="tile-footer">
-                                    <h4>
-                                        akshaygoud509@gmail.com
-                                    </h4>
-                                    <span>thanks for your visit</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-4"></div>
-                    </div>
+                    <h3>akshay kumar thupakula</h3>
+                    <span>9100751090</span>
+                    <span data-fill="100.5%" style="width: 100%;"></span>
+
+                    <h4>
+                        akshaygoud509@gmail.com
+                    </h4>
+                    <span>thanks for your visit</span>
+
 
                 </div>
             </div>
