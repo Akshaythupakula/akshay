@@ -540,7 +540,7 @@ iframe {
     list-style: none;
     width: 20px;
     height: 20px;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(240, 234, 234, 0.2);
     animation: animate 25s linear infinite;
     bottom: -150px;
 
@@ -548,8 +548,8 @@ iframe {
 
 .circles li:nth-child(1) {
     left: 25%;
-    width: 80px;
-    height: 80px;
+    width: 20px;
+    height: 20px;
     animation-delay: 0s;
 }
 
@@ -571,7 +571,7 @@ iframe {
 
 .circles li:nth-child(4) {
     left: 40%;
-    width: 60px;
+    width: 20px;
     height: 60px;
     animation-delay: 0s;
     animation-duration: 18s;
@@ -586,14 +586,14 @@ iframe {
 
 .circles li:nth-child(6) {
     left: 75%;
-    width: 110px;
+    width: 20px;
     height: 110px;
     animation-delay: 3s;
 }
 
 .circles li:nth-child(7) {
     left: 35%;
-    width: 150px;
+    width: 20px;
     height: 150px;
     animation-delay: 7s;
 }
@@ -614,12 +614,48 @@ iframe {
     animation-duration: 35s;
 }
 
-.circles li:nth-child(10) {
+.circles li:nth-child(11) {
     left: 85%;
-    width: 150px;
-    height: 150px;
-    animation-delay: 0s;
+    width: 20px;
+    height: 20px;
+    animation-delay: 18s;
+    animation-duration: 61s;
+}
+
+.circles li:nth-child(12) {
+    left: 55%;
+    width: 20px;
+    height: 110px;
+    animation-delay: 4s;
+    animation-duration: 21s;
+}
+.circles li:nth-child(13) {
+    left: 35%;
+    width: 20px;
+    height: 45px;
+    animation-delay: 6s;
+    animation-duration: 18s;
+}
+.circles li:nth-child(14) {
+    left: 25%;
+    width: 20px;
+    height: 40px;
+    animation-delay: 2s;
+    animation-duration: 17s;
+}
+.circles li:nth-child(15) {
+    left: 75%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 3s;
     animation-duration: 11s;
+}
+.circles li:nth-child(16) {
+    left: 15%;
+    width: 20px;
+    height: 60px;
+    animation-delay: 5s;
+    animation-duration: 18s;
 }
 
 
