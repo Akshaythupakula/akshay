@@ -30,8 +30,7 @@ I focus on building scalable solutions with clean architecture, optimized perfor
 [![Stack Overflow](https://img.shields.io/badge/StackOverflow-F58025?logo=stackoverflow&logoColor=white)](https://stackoverflow.com/users/11837726/akshay-goud?tab=profile)  
 [![NPM](https://img.shields.io/badge/NPM-CB3837?logo=npm&logoColor=white)](https://www.npmjs.com/~akshaythupakula1)  
 [![LeetCode](https://img.shields.io/badge/LeetCode-FFA116?logo=leetcode&logoColor=white)](https://leetcode.com/u/akshaygoud50/)  
-[![Instagram](https://img.shields.io/badge/Instagram-E4405F?logo=instagram&logoColor=white)](https://instagram.com/Akshaythupakula)  
-[![Email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:Akshaygoud509@gmail.com)  
+[![Instagram](https://img.shields.io/badge/Instagram-E4405F?logo=instagram&logoColor=white)](https://instagram.com/Akshaythupakula)[![Email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:Akshaygoud509@gmail.com)  
 
 ---
 
@@ -52,3 +51,4 @@ I focus on building scalable solutions with clean architecture, optimized perfor
 ---
 
 ⭐️ *“Code is like humor. When you have to explain it, it’s bad.”*
+
