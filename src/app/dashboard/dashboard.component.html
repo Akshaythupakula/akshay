@@ -1,322 +1,98 @@
-<div class=" container iframe" [ngClass]="{ 'mobileview': mobile1 }">
+<header>
+  <div class="logo">A</div>
+  <nav>
+    <ul>
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
-    <div class="row">
-        <div class="co-sm-2">
-        </div>
-        <div class="col-sm-6 sent2">
-            <h4>Hai, my name is </h4>
-            <h1>Thupakula akshay kumar</h1>
-            <H2>This is the mobile view of my website </H2>
-            <p>loooking forward for other responses
-            </p>
+<section #section id="hero" class="hero">
+  <h1>Akshay</h1>
+  <h2>Full-Stack Developer</h2>
+  <p>Building scalable, modern applications with precision and performance.</p>
+  <a href="#contact" class="btn">Hire Me</a>
+</section>
 
-            <p class="button-8">large mobiles</p>
-            <p class="button-8">small mobiles</p>
-            <br>
-            <hr>
-            <p (click)="back()" class="button-8">back</p>
-        </div>
-        <div class="col-sm-4">
-            <div class="mobile">
-                <div class="top-bar">
-                    <span class="dot"></span>
-                </div>
-                <div class="screen">
+<section #section id="skills">
+  <h2>Skills</h2>
+  <div class="skills-grid">
+    <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"><p>React.js</p></div>
+    <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"><p>React Native</p></div>
+    <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg"><p>Angular</p></div>
+    <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"><p>Node.js</p></div>
+    <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"><p>Express.js</p></div>
+    <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"><p>MongoDB</p></div>
+    <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"><p>DSA</p></div>
+    <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"><p>Problem Solving</p></div>
+  </div>
+</section>
 
-                    <div class=" iframe-container">
-                        <iframe src="https://akshayprofile.netlify.app/" frameborder="0"></iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
+<section #section id="projects">
+  <h2>Projects</h2>
+  <div class="project-grid">
+    <div class="project-card">
+      <img src="./image.png" alt="Project Screenshot">
+      <h3>Csafe</h3>
+      <p>AI-powered React Native app that blocks harmful content online and offline, ensuring child safety with privacy-focused, seamless protection.</p>
+      <span class="tech">React Native</span> <span class="tech">API</span>
+      <a href="#" class="btn">View Project</a>
     </div>
-
-</div>
-
-<div class="container-fluid  " [ngClass]="{ 'head': mobile1 }">
-    <nav class="navbar navbar-expand-lg  " >
-        <div class="container-fluid">
-            <a class="navbar-brand" id="nam">akshay</a>
-
-            <div class="navbar-toggler" data-toggle="collapse" id="nam" (click)="toggleNavbar()"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-
-                <span *ngIf=isNavbarCollapsed class="fas fa-chevron-left">
-
-                </span>
-                <span *ngIf=!isNavbarCollapsed class="fas fa-bars">
-
-                </span>
-
-            </div>
-
-
-            <div class="collapse navbar-collapse" id="nam" [ngClass]="{ 'show': isNavbarCollapsed }">
-                <ul class="navbar-nav me-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#about">Skills</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#experince">experinces</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#work">work</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#contact">Contact </a>
-                    </li>
-                </ul>
-
-
-
-            </div>
-        </div>
-    </nav>
-    <div (click)="nav()">
-        <div class="container ">
-            <div class="row r1">
-                <div class="col-sm-6 sent" >
-                    <h4>Hai, my name is </h4>
-                    <h1>Thupakula akshay kumar</h1>
-                    <H2>I build things for the web and mobile. </H2>
-                    <p id="tens">I am a software engineer specializing in building and desigining mobile and web
-                        applications
-                        .
-                        Currently I am focused on building web applications for Visiram Solutions.
-                    </p>
-                    <p (click)="mobile()" class="button-8" id="res">view this page responsiveness</p>
-                </div>
-                <div class="col-sm-5 image">
-                    <img src="./../../assets/WhatsApp Image 2024-03-15 at 10.28.10 AM.jpeg" alt="" class="img-fluid" >
-                    <br>
-
-                </div>
-            </div>
-            <br>
-            <br>
-
-
-            <!-- mobile view in complete -->
-
-
-
-        </div>
-
-
-
-        <div class="container-fluid">
-
-            <div id="work">
-                <h1>Work</h1>
-            </div>
-            <hr>
-            <!-- <div class="container-fluid work ">
-
-                <div class="row">
-                    <ul class="circles">
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
-                
-                    <div class="col-sm-4">
-                        <a href="https://smashaka.netlify.app/">
-
-                            <div class="mobile">
-                                <div class="top-bar">
-                                    <span class="dot"></span>
-                                </div>
-                                <div class="screen">
-
-                                    <div class=" iframe-container backer">
-                                        <iframe src="https://smashaka.netlify.app/" frameborder="0"></iframe>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-
-
-                    </div>
-                </div>
-            </div> -->
-<div class="row ">
-    <div class="col-sm-2"></div>
-    <div class="col-sm-5">
-        <div class="container ">
-            <div class="wrapper">
-                <div class="banner-image">
-
-                </div>
-                <h1> Smash Pigs</h1>
-                <p>its a fun game , you smash pigs, <br />
-                    untill you step on bombs</p>
-            </div>
-            <div class="button-wrapper">
-                <button class="btn outline">DETAILS</button>
-                &nbsp;
-                <a href="https://smashaka.netlify.app/"> <button class="btn fill">PLAY GAME</button></a>
-            </div>
-        </div>
+    <div class="project-card">
+      <img src="https://via.placeholder.com/400x200" alt="Project Screenshot">
+      <h3>Full-Stack Chat App</h3>
+      <p>Real-time chat with authentication using React, Node.js, and MongoDB.</p>
+      <span class="tech">React</span> <span class="tech">Node.js</span>
+      <a href="#" class="btn">View Project</a>
     </div>
-    <div class="col-sm-5">
-        <div class="container ">
-            <div class="wrapper">
-                <div class="banner-image1">
+  </div>
+</section>
 
-                </div>
-                <h1>Coloredices</h1>
-                <p>its a fun two player game , where you should find colors according to the dices, <br />who ever finds more wins</p>
-            </div>
-            <div class="button-wrapper">
-                <button class="btn outline">DETAILS</button>
-                &nbsp;
-                <a href="https://coloredices.netlify.app/"> <button class="btn fill">PLAY GAME</button></a>
-            </div>
-        </div>
+<section #section id="experience">
+  <h2>Experience</h2>
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="circle"></div>
+      <div class="content">
+        <h3>Software Developer – Visiram Solutions</h3>
+        <p>Worked on scalable web applications, optimized performance, and led feature development.</p>
+      </div>
     </div>
-</div>
-        
-            
-
-            <div id="about">
-                <h1>Skills</h1>
-            </div>
-
-            <hr>
-            <div class=" skill">
-                <div class="row skills" [class.visible]="isVisible">
-
-
-
-                    <div class="col-sm-4 paragraph" [ngClass]="{ 'display': none }">
-                        <div class="tile-progress tile-primary">
-                            <div class="tile-header">
-                                <h3>Angular</h3>
-                                <span>did flaless websites</span>
-                            </div>
-                            <div class="tile-progressbar">
-                                <span data-fill="80.5%" style="width: 80.5%;"></span>
-                            </div>
-                            <div class="tile-footer">
-                                <h4>
-                                    <span class="pct-counter">80.5</span>%
-                                </h4>
-                                <span>my websites are clean and responsive</span>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                    <div class="col-sm-4 paragraph" [ngClass]="{ 'display': none }">
-                        <div class="tile-progress tile-primary">
-                            <div class="tile-header">
-                                <h3>React</h3>
-                                <span>proficient in problem solving</span>
-                            </div>
-                            <div class="tile-progressbar">
-                                <span data-fill="65.5%" style="width: 65.5%;"></span>
-                            </div>
-                            <div class="tile-footer">
-                                <h4>
-                                    <span class="pct-counter">65.5</span>%
-                                </h4>
-                                <span>designed 4 websites and a game</span>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="col-sm-4 paragraph" [ngClass]="{ 'display': none }">
-                        <div class="tile-progress tile-primary">
-                            <div class="tile-header">
-                                <h3>ReactNative</h3>
-                                <span>designed mobile applications </span>
-                            </div>
-                            <div class="tile-progressbar">
-                                <span data-fill="85.5%" style="width: 85.5%;"></span>
-                            </div>
-                            <div class="tile-footer">
-                                <h4>
-                                    <span class="pct-counter">85.5</span>%
-                                </h4>
-                                <span> developed best mobile applications </span>
-                            </div>
-                        </div>
-                    </div>
-
-
-                </div>
-            </div>
-            <div id="experince">
-                <h1>experince</h1>
-            </div>
-            <hr>
-            <div class="row exp">
-                <p>
-                    I am a highly skilled software developer with extensive experience in building robust and scalable
-                    applications using React Native, Angular, and React.js. Over the years, I have honed my skills in
-                    front-end development and have successfully delivered projects for various clients across different
-                    industries.
-                    <br>
-                    Overall, my experience with React Native, Angular, and React.js has equipped me with the skills and
-                    knowledge needed to deliver high-quality software solutions that meet the needs of clients and end
-                    users. I am passionate about leveraging cutting-edge technologies to create innovative and
-                    user-friendly applications that make a positive impact in the digital world.
-                </p>
-            </div>
-
-
-
-            <div class="container-fluid backer">
-                <ul class="circles">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-                <div class="contact">
-
-                    <h1 id="contact">
-                        Contact
-                    </h1>
-                    <hr>
-
-                    <h3>akshay kumar thupakula</h3>
-                    <span>9100751090</span>
-                    <span data-fill="100.5%" style="width: 100%;"></span>
-
-                    <h4>
-                        akshaygoud509@gmail.com
-                    </h4>
-                    <span>thanks for your visit</span>
-
-
-                </div>
-            </div>
-
-        </div>
-      
-
-
+    <div class="timeline-item">
+      <div class="circle"></div>
+      <div class="content">
+        <h3>Entrepreneur – Hotel & Hostel Business</h3>
+        <p>Managed operations, developed digital solutions for bookings, and scaled customer experience.</p>
+      </div>
     </div>
-</div>
+  </div>
+</section>
+
+<section #section id="about">
+  <h2>About Me</h2>
+  <p>I am a Full-Stack Developer with expertise in modern frameworks and a passion for solving complex problems. With experience across both tech and entrepreneurship, I bring strong problem-solving and system design skills.</p>
+</section>
+
+<section #section id="contact">
+  <h2>Contact</h2>
+  <form>
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea placeholder="Your Message" required></textarea>
+    <button type="submit" class="btn">Send</button>
+  </form>
+  <div class="socials">
+    <a href="https://github.com/Akshaythupakula"><img src="https://cdn.simpleicons.org/github/ffffff"></a>
+    <a href="https://www.linkedin.com/in/akshay-thupakula-b243b0174/"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png"></a>
+    <a href="https://leetcode.com/u/akshaygoud50/"><img src="https://cdn.simpleicons.org/leetcode"></a>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 Akshay | Full-Stack Developer</p>
+</footer>
