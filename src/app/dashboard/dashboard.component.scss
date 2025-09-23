@@ -34,6 +34,13 @@ section {
     opacity: 1;
     transform: translateY(0);
   }
+  .project-card img {
+  width: 200px;
+  height: 200px; // set all images to same height
+  object-fit: contain; // ensures images fill box without stretching
+  border-radius: 8px;
+}
+
 }
 
 /* Header */
@@ -133,7 +140,7 @@ header {
 /* Projects */
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 25px;
   margin-top: 40px;
 
@@ -145,7 +152,7 @@ header {
     text-align: left;
     transition: transform 0.3s;
 
-    &:hover { transform: translateY(-10px); }
+    &:hover { transform: translateY(10px); }
 
     img { width: 40%; border-radius: 15px; margin-bottom: 15px; }
 
