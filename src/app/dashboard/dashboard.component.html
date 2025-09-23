@@ -97,20 +97,25 @@
   <p>I am a Full-Stack Developer with expertise in modern frameworks and a passion for solving complex problems. With experience across both tech and entrepreneurship, I bring strong problem-solving and system design skills.</p>
 </section>
 
-<section #section id="contact">
-  <h2>Contact</h2>
-  <form>
-    <input type="text" placeholder="Your Name" required>
-    <input type="email" placeholder="Your Email" required>
-    <textarea placeholder="Your Message" required></textarea>
-    <button type="submit" class="btn">Send</button>
+<!-- Example Sections for Intersection Observer -->
+
+<section #section class="section" id="contact">
+  <h2>Contact Me</h2>
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+    <input type="text" formControlName="name" placeholder="Your Name" required>
+    <input type="email" formControlName="email" placeholder="Your Email" required>
+    <textarea formControlName="message" placeholder="Your Message" required></textarea>
+    <button type="submit" class="btn" [disabled]="contactForm.invalid">Send</button>
   </form>
-  <div class="socials">
+  <p>{{ statusMessage }}</p>
+   <div class="socials">
     <a href="https://github.com/Akshaythupakula"><img src="https://cdn.simpleicons.org/github"></a>
     <a href="https://www.linkedin.com/in/akshay-thupakula-b243b0174/"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png"></a>
     <a href="https://leetcode.com/u/akshaygoud50/"><img src="https://cdn.simpleicons.org/leetcode"></a>
   </div>
 </section>
+
+
 
 <footer>
   <p>© 2025 Akshay | Full-Stack Developer</p>
