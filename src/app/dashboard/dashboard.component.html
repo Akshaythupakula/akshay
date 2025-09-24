@@ -1,16 +1,26 @@
 <header>
-  <div class="logo">A</div>
-  <nav>
-    <ul>
-      <li><a href="#hero">Home</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+  <div class="logo">MyPortfolio</div>
+
+  <!-- Hamburger -->
+  <div class="hamburger" (click)="toggleMenu()" [class.active]="menuOpen">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- Navigation -->
+<nav [class.open]="menuOpen">
+  <ul>
+    <li><a href="#hero" (click)="closeMenu()">Home</a></li>
+    <li><a href="#skills" (click)="closeMenu()">Skills</a></li>
+    <li><a href="#projects" (click)="closeMenu()">Projects</a></li>
+    <li><a href="#about" (click)="closeMenu()">About</a></li>
+    <li><a href="#contact" (click)="closeMenu()">Contact</a></li>
+  </ul>
+</nav>
+
 </header>
+
 
 <section #section id="hero" class="hero">
   <h1>Akshay</h1>
