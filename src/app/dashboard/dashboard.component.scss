@@ -1,3 +1,16 @@
+.cursor-glow {
+  position: fixed;
+  pointer-events: none; // so it doesn’t block clicks
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(79,172,254,0.6) 0%, rgba(79,172,254,0) 70%);
+  transform: translate(-50%, -50%);
+  transition: transform 0.05s ease-out;
+  z-index: 9999;
+}
+
+
 /* Variables */
 $bg-dark: #0a0a0f;
 $text-light: #010110;
@@ -161,8 +174,11 @@ header {
   h2 {
     font-size: 1.8rem;
     margin: 15px 0;
+    color:#ccc;
   }
-
+p{
+  color:#ccc;
+}
   @media (max-width: 768px) {
     h1 {
       font-size: 2.5rem;
@@ -226,20 +242,22 @@ header {
   margin-top: 40px;
 
   .project-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
     border-radius: 20px;
     padding: 20px;
-    text-align: left;
     transition: transform 0.3s;
+    min-height: 450px;
 
-    &:hover {
-      transform: translateY(10px);
-    }
+    &:hover { transform: translateY(10px); }
 
     img {
       width: 100%;
-      max-width: 300px;
+      height: 200px;
+      object-fit: cover;
       border-radius: 15px;
       margin-bottom: 15px;
     }
@@ -252,8 +270,25 @@ header {
       border-radius: 12px;
       font-size: 0.8rem;
     }
+
+    .btn {
+      margin-top: auto;
+      align-self: start;
+    }
+  }
+
+  // Responsive adjustments
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr; // single column
+    .project-card {
+      min-height: auto; // allow height to adjust naturally
+      .btn {
+        align-self: center; // center button on small screens
+      }
+    }
   }
 }
+
 
 /* Experience */
 .timeline {
@@ -377,6 +412,7 @@ footer {
   padding: 20px;
   background: #111;
   text-align: center;
+  color: #ffffff;
 }
 
 /* Hamburger Menu */

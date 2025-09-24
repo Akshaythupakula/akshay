@@ -1,4 +1,4 @@
-import { Component, AfterViewInit, ElementRef, ViewChildren, QueryList } from '@angular/core';
+import { Component, AfterViewInit, ElementRef, ViewChildren, QueryList, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
@@ -9,19 +9,12 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class DashboardComponent implements AfterViewInit {
   menuOpen = false;
-
-  toggleMenu() {
-    this.menuOpen = !this.menuOpen;
-  }
-
-  closeMenu() {
-    this.menuOpen = false;
-  }
+  @ViewChild('cursorGlow') cursorGlow!: ElementRef<HTMLDivElement>;
   @ViewChildren('section') sections!: QueryList<ElementRef<HTMLElement>>;
 
   contactForm: FormGroup;
   statusMessage: string = '';
-  private formspreeUrl = 'https://formspree.io/f/mldpeeld'; // Your Formspree endpoint
+  private formspreeUrl = 'https://formspree.io/f/mldpeeld';
 
   constructor(private fb: FormBuilder, private http: HttpClient) {
     this.contactForm = this.fb.group({
@@ -31,7 +24,16 @@ export class DashboardComponent implements AfterViewInit {
     });
   }
 
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
+  }
+
+  closeMenu() {
+    this.menuOpen = false;
+  }
+
   ngAfterViewInit(): void {
+    // IntersectionObserver for section animations
     const options: IntersectionObserverInit = { threshold: 0.1 };
     const observer = new IntersectionObserver((entries, obs) => {
       entries.forEach(entry => {
@@ -41,9 +43,16 @@ export class DashboardComponent implements AfterViewInit {
         }
       });
     }, options);
-
     this.sections.forEach((sec: ElementRef<HTMLElement>) => {
       observer.observe(sec.nativeElement);
+    });
+
+    // Cursor glow follow
+    document.addEventListener('mousemove', (e: MouseEvent) => {
+      if (this.cursorGlow) {
+        this.cursorGlow.nativeElement.style.left = e.clientX + 'px';
+        this.cursorGlow.nativeElement.style.top = e.clientY + 'px';
+      }
     });
   }
 
